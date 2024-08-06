@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+    <div class="container">
+        <h1>Simple Calculator</h1>
+        <label for="operation">Choose an operation:</label>
+        <select id="operation" onchange="showInputs()">
+            <option value="rectangleArea">Area of Rectangle</option>
+            <option value="fahrenheitToCelsius">Fahrenheit to Celsius</option>
+            <option value="circleArea">Area of Circle</option>
+        </select>
+        <br><br>
+        <div id="rectangleInputs" style="display: none">
+            <label for="rectangleLength">Length:</label>
+            <input type="number" id="rectangleLength" placeholder="Enter length"><br><br>
+            <label for="rectangleWidth">Width:</label>
+            <input type="number" id="rectangleWidth" placeholder="Enter width">
+        </div>
+
+        <div id="fahrenheitInput" style="display: none;">
+            <label for="fahrenheit">Fahrenheit:</label>
+            <input type="number" id="fahrenheit" placeholder="Enter Fahrenheit">
+        </div>
+
+        <div id="circleInput" style="display: none;">
+            <label for="radius">Radius:</label>
+            <input type="number" id="radius" placeholder="Enter radius">
+        </div>
+        <br><br>
+
+        <button type="button" onclick="calculate()">Calculate</button>
+
+        <p id="result"></p>
+    </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

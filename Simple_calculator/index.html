@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table id="calculator">
+        <tr>
+            <td colspan="4"><input type="text" id="result" readonly></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="btn" value="C" onclick="clearResult()"></td>
+            <td><input type="button" class="btn" value="CE" onclick="backspace()"></td>
+            <td><input type="button" class="btn" value="%" onclick="appendValue('%')"></td>
+            <td><input type="button" class="btn" value="/" onclick="appendValue('/')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="btn" value="7" onclick="appendValue('7')"></td>
+            <td><input type="button" class="btn" value="8" onclick="appendValue('8')"></td>
+            <td><input type="button" class="btn" value="9" onclick="appendValue('9')"></td>
+            <td><input type="button" class="btn" value="*" onclick="appendValue('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="btn" value="4" onclick="appendValue('4')"></td>
+            <td><input type="button" class="btn" value="5" onclick="appendValue('5')"></td>
+            <td><input type="button" class="btn" value="6" onclick="appendValue('6')"></td>
+            <td><input type="button" class="btn" value="-" onclick="appendValue('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="btn" value="1" onclick="appendValue('1')"></td>
+            <td><input type="button" class="btn" value="2" onclick="appendValue('2')"></td>
+            <td><input type="button" class="btn" value="3" onclick="appendValue('3')"></td>
+            <td><input type="button" class="btn" value="+" onclick="appendValue('+')"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="button" class="btn" value="0" onclick="appendValue('0')"></td>
+            <td><input type="button" class="btn" value="." onclick="appendValue('.')"></td>
+            <td><input type="button" class="btn" value="=" onclick="calculateResult()"></td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
