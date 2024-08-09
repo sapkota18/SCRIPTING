@@ -34,5 +34,7 @@ function display(number) {
 
     for (let i = 0; i < toShow.length; i++) {
         document.getElementById("c" + toShow[i]).style.visibility = "visible";
+        document.getElementById("c" + toShow[i]).style.background="green";
+        document.getElementById("c" + toShow[i]).style.boxShadow="10px 10px 20px green"
     }
 }
