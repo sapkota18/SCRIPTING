@@ -1,0 +1,52 @@
+#outer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    border: 2px solid black;
+    background-color:red;
+    width: 300px;
+    height: 300px;
+    margin: 40px;
+    border-radius: 10px;
+    box-shadow:10px 10px 20px red;
+}
+.child{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(234, 255, 0);
+    padding: 25px;
+    border-radius: 50%;
+    margin: 5px;
+    align-content: center;
+    
+}
+#dice{
+    background-color: gold;
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size:1rem;
+    border: 2px solid goldenrod;
+    border-radius:5px;
+    margin-left: 750px;
+}
+
+#dice:hover{
+    background-color: burlywood;
+    transform: scale(1.05);
+}
+
+#roll{
+    background-color: whitesmoke;
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size:1rem;
+    border: 2px solid goldenrod;
+    border-radius:5px;
+    margin-left: 700px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
