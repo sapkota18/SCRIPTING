@@ -21,15 +21,15 @@ boxes.forEach((box) => {
     console.log("Box clicked");
     if (turnO) {
       box.innerText = "O";
-      box.setAttribute('data-player', 'O');
+      box.setAttribute("data-player", "O");
       turnO = false;
     } else {
       box.innerText = "X";
-      box.setAttribute('data-player', 'X');
+      box.setAttribute("data-player", "X");
       turnO = true;
     }
     box.disabled = true;
-    checkWinner();  
+    checkWinner();
   });
 });
 
@@ -65,7 +65,7 @@ const showDraw = () => {
 };
 
 const checkWinner = () => {
-  let isDraw = true;  
+  let isDraw = true;
 
   for (let pattern of winPatterns) {
     let pos1val = boxes[pattern[0]].innerText;
@@ -75,18 +75,19 @@ const checkWinner = () => {
     if (pos1val !== "" && pos2val !== "" && pos3val !== "") {
       if (pos1val === pos2val && pos2val === pos3val) {
         showWinner(pos1val);
-        return;  
+        return;
       }
     }
 
-    if (boxes[pattern[0]].innerText === "" || 
-        boxes[pattern[1]].innerText === "" || 
-        boxes[pattern[2]].innerText === "") {
+    if (
+      boxes[pattern[0]].innerText === "" ||
+      boxes[pattern[1]].innerText === "" ||
+      boxes[pattern[2]].innerText === ""
+    ) {
       isDraw = false;
     }
   }
 
- 
   if (isDraw) {
     showDraw();
   }
